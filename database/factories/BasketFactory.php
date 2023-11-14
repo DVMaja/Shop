@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Blog>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Basket>
  */
 class BasketFactory extends Factory
 {
@@ -17,7 +17,8 @@ class BasketFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'item_id' => $this->faker->numberBetween(1,10),
+            'user_id' => $this->faker->numberBetween(1,10),
         ];
     }
 }
