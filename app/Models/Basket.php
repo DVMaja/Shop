@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Basket extends Model
 {
     use HasFactory;
+
+    //protected  $primaryKey = 'book_id';
+
+    protected $fillable = [
+        'item_id',
+        'user_id',
+    ];
 }
