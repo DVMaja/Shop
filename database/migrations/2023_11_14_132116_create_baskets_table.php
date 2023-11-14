@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('item_id')->references('item_id')->on('products');
+            $table->foreignId('user_id')->references('users')->on('id');            
             $table->timestamps();
         });
     }
