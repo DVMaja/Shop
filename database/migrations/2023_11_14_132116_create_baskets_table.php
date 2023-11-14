@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('baskets', function (Blueprint $table) {
-            $table->id();
+        Schema::create('baskets', function (Blueprint $table) {            
             $table->foreignId('item_id')->references('item_id')->on('products');
-            $table->foreignId('user_id')->references('users')->on('id');            
+            $table->foreignId('user_id')->references('id')->on('users');            
             $table->timestamps();
         });
     }
